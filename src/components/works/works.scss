@@ -17,7 +17,9 @@
         position: absolute;
 
         @include mobile {
-            display: none;
+            // display: none;
+            // position: relative;
+            bottom: 40px;
         }
 
         &.left{
@@ -40,9 +42,9 @@
         transition: all 1s ease-out;
 
         @include mobile {
-            height: 100vh;
-            flex-direction: column;
-            justify-content: center;
+            height: 80vh;
+            // flex-direction: column;
+            // justify-content: center;
         }
 
         .container{
@@ -50,6 +52,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include mobile{
+                height: 70vh;
+            }
 
             .item{
                 width: 700px;
@@ -62,8 +68,9 @@
 
                 @include mobile {
                     width: 80%;
-                    height: 170px;
-                    margin: 10px 0;
+                    height: 90%px;
+                    margin: 10px 10;
+                    flex-direction: column-reverse;
                 }
 
                 .left{
@@ -72,6 +79,9 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @include mobile{
+                        margin: 20px;
+                    }
 
                     .leftContainer{
                         height: 90%;
@@ -95,8 +105,7 @@
                             justify-content: center;
 
                             @include mobile {
-                                width: 20px;
-                                height: 20px;
+                                display: none;
                                 
                             }
 
@@ -114,21 +123,23 @@
                             font-size: 20px;
 
                             @include mobile {
-                                font-size: 13px;
+                                font-size: 19px;
                             }
                         }
 
                         p{
                             font-size: 13px;
 
-                            @include mobile {
-                                display: none;
-                            }
+                            // @include mobile {
+                            //     display: none;
+                            // }
                         }
 
                         a{
-                            font-size: 12px;
+                            text-align: center;
+                            font-size: 16px;
                             font-weight: 600;
+                            margin: 10px;
                             color: inherit;
                             text-transform: none;
                             cursor: pointer;

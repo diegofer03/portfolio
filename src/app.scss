@@ -1,5 +1,9 @@
 @import './global.scss';
 
+html{
+    scroll-behavior: smooth
+}
+
 .app{
     height: 100vh;
     transition: scroll 1s ease-out;
