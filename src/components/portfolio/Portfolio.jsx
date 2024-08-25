@@ -7,6 +7,7 @@ import {
     mobilePortfolio,
     contentPortfolio,
   } from "../../data";
+import { Typography } from "@material-ui/core";
 
 export default function Portfolio() {
 
@@ -55,7 +56,7 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio" id='portfolio'>
-            <h1>Skills</h1>
+            <Typography variant="h2">Skills</Typography>
             <ul>
                 {list.map(item => 
                     <PortfolioList 

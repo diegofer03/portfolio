@@ -2,6 +2,7 @@ import { useState } from "react"
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import "./contact.scss"
+import { Typography } from "@material-ui/core";
 
 export default function Contact() {
     const [message,setMessage] = useState('')
@@ -18,11 +19,11 @@ export default function Contact() {
                     <img src="assets/shake.svg" alt="" />
                 </div>
                 <div className="right">
-                    <h2>Contact</h2>
+                    <Typography variant="h2">Contact</Typography>
                     <form onSubmit={handleSubmit}>
                         {/* <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/> */}
                         <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                        <button type="submit" >Contact</button>
+                        <button type="submit" ><Typography variant="body1">Contact</Typography></button>
                     </form>
                     <div className="contact_links">
                         <a href='https://github.com/diegofer03' rel="noreferrer" target="_blank">
@@ -34,7 +35,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            <p >Developed by <a className="develop" href='https://github.com/diegofer03' rel="noreferrer" target="_blank">@diegofer03</a></p>
+            <Typography>Developed by <a className="develop" href='https://github.com/diegofer03' rel="noreferrer" target="_blank">@diegofer03</a></Typography>
         </div>
     )
 }

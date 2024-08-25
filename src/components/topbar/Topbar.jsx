@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core"
 import "./topbar.scss"
 // import {Mail} from '@material-ui/icons'
 
@@ -15,16 +16,16 @@ export default function Topbar({menuOpen,setMenuOpen}) {
                 <div className="middle">
                     <ul className="links_list">
                         <li>
-                            <a href="#portfolio">Skills</a>
+                            <a href="#portfolio"> <Typography variant="body1">Skills</Typography> </a>
                         </li>
                         <li>
-                            <a href="#works">Portfolio</a>
+                            <a href="#works"> <Typography variant="body1">Portfolio</Typography></a>
                         </li>
                         <li>
-                            <a href="#references">References</a>
+                            <a href="#references"> <Typography variant="body1">About</Typography></a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#contact"><Typography variant="body1">Contact</Typography> </a>
                         </li>
                     </ul>
                 </div>

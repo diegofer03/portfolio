@@ -1,5 +1,36 @@
 import { useState } from "react";
 import "./works.scss"
+import { Box, Button, styled, Typography } from "@material-ui/core";
+
+const BootstrapButton = styled(Button)({
+  boxShadow: 'none',
+  textTransform: 'none',
+  fontSize: 14,
+  width: '70%',
+  padding: '6px 12px',
+  border: '3px solid',
+  lineHeight: 1.5,
+  borderRadius: '20px',
+  backgroundColor: 'White',
+  borderColor: '#ac4040',
+  fontFamily: [
+    '-apple-system',
+    'BlinkMacSystemFont',
+    '"Segoe UI"',
+    'Roboto',
+    '"Helvetica Neue"',
+    'Arial',
+    'sans-serif',
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ]
+  .join(','),
+  '&:hover': {
+    backgroundColor: '#f9c1c1',
+    boxShadow: 'none',
+  },
+});
 
 export default function Works() {
 
@@ -35,6 +66,16 @@ export default function Works() {
           url: 'https://trelloclone-angular.vercel.app/',
           img:
             "./assets/trellocap2.png",
+        },
+        {
+          id: "13",
+          icon: "./assets/globe.png",
+          title: "Roy Manage Store API",
+          desc:
+            "API used in a project for manage a store supplies and bills, developed in express.js and MySQL. Deployed in container docker container with Digital Ocean",
+          url: 'http://167.99.63.132:3000/api/doc/',
+          img:
+            "./assets/roystore.png",
         },
         {
           id: "3",
@@ -134,6 +175,11 @@ export default function Works() {
             : setSlide(currentSlider < data.length -1 ? currentSlider + 1 : 0)
     }
 
+    const handleLink = (url) => {
+      window.open(url, "_blank");
+      console.log(url)
+    }
+
     return (
         <>
             <div className="works" id='works'>
@@ -146,12 +192,15 @@ export default function Works() {
                                         <div className="imgContainer">
                                             <img src={item.icon} alt="" />
                                         </div>
-                                        <h2>{item.title}</h2>
-                                        <p>{item.desc}</p>
-                                        <a href={item.url} rel="noreferrer" target="_blank">View</a>
+                                        <Typography variant="h2">{item.title}</Typography>
+                                        <Typography variant="body1">{item.desc}.</Typography>
+                                        <Box display='flex' justifyContent='center'>
+                                          <BootstrapButton size="small" variant="outlined" onClick={() => handleLink(item.url)}> View</BootstrapButton>
+                                        </Box>
+                                        {/* <Typography variant="body1"><a href={item.url} rel="noreferrer" target="_blank"></a></Typography> */}
                                     </div>
                                 </div>
-                                <div className="right" >
+                                <div className="right" onClick={() => handleLink(item.url)}>
                                     <img src={item.img} alt="" />
                                 </div>
                             </div>
