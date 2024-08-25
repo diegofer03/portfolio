@@ -40,7 +40,8 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-
+        transition: all 1s ease-out;
+    
         @include mobile{
             width: 100%;      
         }

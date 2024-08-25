@@ -126,10 +126,11 @@
                             }
                         }
 
-                        span{
+                        a{
                             font-size: 12px;
                             font-weight: 600;
-                            text-decoration: underline;
+                            color: inherit;
+                            text-transform: none;
                             cursor: pointer;
                         }
                     }
@@ -137,6 +138,7 @@
 
                 .right{
                     flex: 8;
+                    width: fit-content;
                     height: 100%;
                     display: flex;
                     justify-content: center;
@@ -144,8 +146,8 @@
                     overflow: hidden;
 
                     img{
-                        width: 400px;
-                        transform: rotate(-10deg);
+                        height: inherit;
+                        object-fit: cover;
                         overflow: hidden;
                     }
                 }

@@ -8,36 +8,129 @@ export default function Works() {
     const data = [
         {
           id: "1",
-          icon: "./assets/mobile.png",
-          title: "Web Design",
+          icon: "./assets/writing.png",
+          title: "Threads Clone",
+          url: 'https://threads-uwdp.onrender.com/',
           desc:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            "Threads clone project developed in angular for the frontend and nest.js with mongoDB for the backend (Free Host, firts load take time)",
           img:
-            "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+            "./assets/threadscap.png",
+        },
+        {
+            id: "10",
+            icon: "./assets/writing.png",
+            title: "Threads API",
+            desc:
+              "API used in threads clone project, developed in nest.js and mongoDB (Free Host, firts load take time)",
+            url: 'https://threads-back-vxwp.onrender.com/api',
+            img:
+              "./assets/threadsback.png",
         },
         {
           id: "2",
           icon: "./assets/globe.png",
-          title: "Mobile Application",
+          title: "Trello Clone",
           desc:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "Trello clone developed in angular",
+          url: 'https://trelloclone-angular.vercel.app/',
           img:
-            "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+            "./assets/trellocap2.png",
         },
         {
           id: "3",
           icon: "./assets/writing.png",
-          title: "Branding",
+          title: "Ecommerce",
           desc:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "Ecommerce project using react.js",
+          url: 'https://shop-commerce-1.netlify.app/',
           img:
-            "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+            "./assets/reactcommercecap2.png",
         },
+        {
+            id: "7",
+            icon: "./assets/writing.png",
+            title: "Register Crud",
+            desc:
+              "Project in vue.js for frontend crud and express.js with postgress for the backend",
+            url: 'https://lets-do-it-project.vercel.app/#/',
+            img:
+              "./assets/vuecrud.png",
+        },
+        {
+            id: "11",
+            icon: "./assets/writing.png",
+            title: "TODO App",
+            desc:
+              "TODO project using angular",
+            url: 'https://angular-lab-todoapp.vercel.app/todoapp',
+            img:
+              "./assets/todoangular.png",
+        },
+        {
+            id: "4",
+            icon: "./assets/writing.png",
+            title: "TODO App",
+            desc:
+              "TODO project using react.js",
+            url: 'https://todo-machine-blush.vercel.app/',
+            img:
+              "./assets/todoreact.png",
+        },
+        {
+            id: "12",
+            icon: "./assets/writing.png",
+            title: "Commercebite",
+            desc:
+              "Ecommerce project using angular",
+            url: 'https://angular-lab-todoapp.vercel.app/',
+            img:
+              "./assets/angularcommerce.png",
+        },
+        {
+            id: "9",
+            icon: "./assets/writing.png",
+            title: "Metrics Charts",
+            desc:
+              "Project in next.js consuming products API showing metrics charts",
+            url: 'https://nextjs-admin-ashy.vercel.app/',
+            img:
+              "./assets/nextjs.png",
+        },
+        {
+            id: "8",
+            icon: "./assets/writing.png",
+            title: "Dessign Patterns Project",
+            desc:
+              "Simple project in react.js appling dessign patterns",
+            url: 'https://react-typescript-practice-seven.vercel.app/',
+            img:
+              "./assets/typescriptpatterns.png",
+        },
+        {
+            id: "5",
+            icon: "./assets/writing.png",
+            title: "Landing Page",
+            desc:
+              "Landing page project using angular and improving metrics and seo",
+            url: 'https://angular-tecnical-fix.vercel.app/',
+            img:
+              "./assets/angularmetrics.png",
+        },
+        {
+            id: "6",
+            icon: "./assets/writing.png",
+            title: "Pokedux",
+            desc:
+              "Project in react.js consuming pokemon API",
+            url: 'https://pokedux-ashy.vercel.app/',
+            img:
+              "./assets/pokedux.png",
+        }
       ];
 
     const handleClick = (way) => {
         way === 'left' 
-            ? setSlide(currentSlider > 0 ? currentSlider-1 : 2)
+            ? setSlide(currentSlider > 0 ? currentSlider-1 : data.length - 1)
             : setSlide(currentSlider < data.length -1 ? currentSlider + 1 : 0)
     }
 
@@ -55,10 +148,10 @@ export default function Works() {
                                         </div>
                                         <h2>{item.title}</h2>
                                         <p>{item.desc}</p>
-                                        <span>Projects</span>
+                                        <a href={item.url} rel="noreferrer" target="_blank">View</a>
                                     </div>
                                 </div>
-                                <div className="right">
+                                <div className="right" >
                                     <img src={item.img} alt="" />
                                 </div>
                             </div>

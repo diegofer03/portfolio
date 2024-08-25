@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import "./contact.scss"
 
 export default function Contact() {
@@ -10,19 +12,26 @@ export default function Contact() {
     }
 
     return (
-        <div className="contact" id='contact'>
-            <div className="left">
-                <img src="assets/shake.svg" alt="" />
+        <div>
+            <div className="contact" id='contact'>
+                <div className="left">
+                    <img src="assets/shake.svg" alt="" />
+                </div>
+                <div className="right">
+                    <h2>Contact</h2>
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" placeholder="Email" />
+                        <textarea placeholder="Message"></textarea>
+                        <button type="submit" >Send</button>
+                        {message && <spam>Thanks, i'll reply :D</spam> }
+                    </form>
+                    <div>
+                        <FaLinkedin/>
+                        <FaGithub/>
+                    </div>
+                </div>
             </div>
-            <div className="right">
-                <h2>Contact</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Email" />
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit" >Send</button>
-                    {message && <spam>Thanks, i'll reply :D</spam> }
-                </form>
-            </div>
+            <p>Developed by @diegofer03</p>
         </div>
     )
 }

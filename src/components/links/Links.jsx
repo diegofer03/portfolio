@@ -12,10 +12,10 @@ export default function Links({setMenuOpen}) {
                 <a href="#intro" onClick={hide}>Home</a>
             </li>
             <li>
-                <a href="#portfolio" onClick={hide}>Portfolio</a>
+                <a href="#portfolio" onClick={hide}>Skills</a>
             </li>
             <li>
-                <a href="#works" onClick={hide}>Works</a>
+                <a href="#works" onClick={hide}>Portfolio</a>
             </li>
             <li>
                 <a href="#references" onClick={hide}>References</a>

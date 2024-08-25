@@ -5,65 +5,57 @@ import {
     featuredPortfolio,
     webPortfolio,
     mobilePortfolio,
-    designPortfolio,
     contentPortfolio,
   } from "../../data";
 
 export default function Portfolio() {
 
-    const [selected, setSelected] = useState('web')
+    const [selected, setSelected] = useState('front')
     const [data, setData] = useState([])
 
     const list = [
         {
-            id: 'web',
-            title: 'Web App'
+            id: 'front',
+            title: 'Frontend'
         },
         {
-            id: 'ecommerce',
-            title: 'E Commerce'
+            id: 'back',
+            title: 'Backend'
         },
         {
-            id: 'php',
-            title: 'Php Laravel'
+            id: 'utils',
+            title: 'Implementation'
         },
         {
-            id: 'responsive',
-            title: 'Responsive'
-        },
-        {
-            id: 'petgram',
-            title: 'Petgram'
-        }
+            id: 'practices',
+            title: 'Best Practices'
+        }  
     ]
 
     useEffect(() => {
 
         switch(selected){
-            case 'web':
+            case 'front':
                 setData(webPortfolio)
                 break
-            case 'ecommerce':
+            case 'back':
                 setData(featuredPortfolio)
                 break
-            case 'php':
+            case 'utils':
                 setData(contentPortfolio)
                 break
-            case 'responsive':
+            case 'practices':
                 setData(mobilePortfolio)
                 break
-            case 'petgram':
-                setData(designPortfolio)
-                break
             default:
-                setData(featuredPortfolio)
+                setData(webPortfolio)
         }
 
     },[selected])
 
     return (
         <div className="portfolio" id='portfolio'>
-            <h1>Portfolio</h1>
+            <h1>Skills</h1>
             <ul>
                 {list.map(item => 
                     <PortfolioList 
