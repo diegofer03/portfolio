@@ -80,7 +80,7 @@ export default function Works() {
         {
           id: "3",
           icon: "./assets/writing.png",
-          title: "Ecommerce",
+          title: "E-commerce",
           desc:
             "Ecommerce project using react.js",
           url: 'https://shop-commerce-1.netlify.app/',

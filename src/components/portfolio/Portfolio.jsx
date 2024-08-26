@@ -25,7 +25,7 @@ export default function Portfolio() {
         },
         {
             id: 'utils',
-            title: 'Implementation'
+            title: 'Tools'
         },
         {
             id: 'practices',
