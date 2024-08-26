@@ -8,13 +8,14 @@
     position: fixed;
     top: 0;
     z-index: 3;
+    // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     transition: all 2s ease;
 
     @include mobile{
         height: 50px;
     }
     .wrapper{
-        padding: 10px 30px;
+        padding: 10px 100px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -23,14 +24,39 @@
             display: flex;
             align-items: center;
             .logo{
-                font-size: 40px;
-                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-right: 50px;
                 text-decoration: none;
                 color: inherit;
-                margin-right: 50px;
+                text-align: start;
 
                 @include mobile{
-                    font-size: 20px;
+                    font-size: 12px;
+                }
+
+                .logoImg{
+                    width: 90px;
+                    @include mobile{
+                        width: 70px;
+                    }
+                }
+                .logo-1{
+                    // letter-spacing: 3px;
+                    // margin-left: 5px;
+                    font-family: "Orbitron", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 600;
+                    // font-style: normal;
+                }
+                .logo-2{
+                    font-weight: bold;
+                    margin-left: 5px;
+                    font-family: "Orbitron", sans-serif;
+                    font-optical-sizing: auto;
+                    // font-weight: <weight>;
+                    // font-style: normal;
                 }
             }
 
@@ -51,10 +77,36 @@
                     font-size: 15px;
                     font-weight: 500;
                 }
+
+                .contactBar{
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+
+        .middle{
+            margin-right: 20%;
+            .links_list{
+                display: flex;
+                color: $maincolor;
+                font-size: 16px;
+                width: fit-content;
+                font-weight: 500;
+                @include mobile{
+                    display: none;
+                }
+                li{
+                    margin: 0 10px;
+                }
             }
         }
 
         .right{
+            display: none;
+            @include mobile{
+                display: block;
+            }
             
             .hamburger{
                 width: 32px;

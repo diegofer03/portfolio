@@ -1,11 +1,23 @@
 @import '../../global.scss';
 
+.container_contact{
+    p {
+        text-align: center;
+    }
+    .develop{
+        color: $maincolor;
+        text-decoration: none;
+        
+    }
+}
+
 .contact{
     background-color: white; 
     display: flex;
 
     @include mobile {
         flex-direction: column;
+        height: 95%;
      }
 
     .left{
@@ -30,10 +42,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
-        h2{
-            font-size: 30px; 
-        }
 
         form{
             width: 70%;
@@ -69,13 +77,30 @@
 
             button{
                 width: 150px;
-                height: 30px;
+                height: 40px;
                 color: whitesmoke;
-                background-color: crimson;
+                background-color: $maincolor;
                 border: none;
+                font-size: 16px;
                 border-radius: 10px;
                 font-weight: 500;
                 cursor: pointer;
+            }
+        }
+
+        .contact_links{
+            font-size: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            margin-top: 20px;
+            
+            a{
+                color: $maincolor;
+            }
+
+            @include mobile{
+                margin-top: 0;
             }
         }
 

@@ -1,19 +1,24 @@
 @import './global.scss';
 
+html{
+    scroll-behavior: smooth
+}
+
 .app{
     height: 100vh;
-
+    transition: scroll 1s ease-out;
     .sections{
         width: 100%;
         height: calc(100vh - 70px);
         background-color: white;
         position: relative;
         top: 70px;
+        transition: all 1s ease-out;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
         
         @include mobile {
             top: 50px;
@@ -24,6 +29,7 @@
             width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
+            transition: all 1s ease-out;
 
             @include mobile {
                 height: calc(100vh - 50px);

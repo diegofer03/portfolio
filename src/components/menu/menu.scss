@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     right: -300px;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,10 @@
         font-size: 35px;
         font-weight: 300;
         color: white;
-        width: 60%;
+        width: 70%;
+        @include mobile{
+            width: 80%;
+        }
 
         li{
             margin-bottom: 25px;

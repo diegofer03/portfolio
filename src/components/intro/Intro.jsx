@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 import {init} from 'ityped'
 import "./intro.scss"
+import { Typography } from "@material-ui/core"
 
 export default function Intro() {
 
@@ -23,9 +24,10 @@ export default function Intro() {
             </div>
             <div className="right">
                 <div className="wrapper">
-                    <h2>Hi, I'm</h2>
-                    <h1>Diego Fernandez</h1>
-                    <h3>Frontend <span ref={textref} ></span> </h3>
+                    <Typography variant="h2">Hi, I'm</Typography>
+                    <Typography variant="h1">Diego Fernandez</Typography>
+                    <Typography variant="h3">Web <span ref={textref} ></span> </Typography>
+                    {/* <h3></h3> */}
                 </div>
                 <a href="#portfolio">
                     <img src="assets/down.png" alt="down-arrow" />
