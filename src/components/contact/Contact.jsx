@@ -19,7 +19,7 @@ export default function Contact() {
                     <img src="assets/shake.svg" alt="" />
                 </div>
                 <div className="right">
-                    <Typography variant="h2">Contact</Typography>
+                    <Typography variant="h4">Contact</Typography>
                     <form onSubmit={handleSubmit}>
                         {/* <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/> */}
                         <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>

@@ -72,7 +72,7 @@ export default function References() {
 
     return (
         <div className="references" id='references'>
-          <Typography variant='h1' >About</Typography>
+          <Typography variant='h4' >About</Typography>
           <Typography width='70%' variant="body1" textAlign='left'>
             I am a front-end web developer with 3+ years of experience creating user interfaces for over 10+ projects, used by
             more than 1,000 users across several companies. I specialize in HTML, CSS, JavaScript, TypeScript, and have
@@ -81,7 +81,7 @@ export default function References() {
             unit testing, microservices, version management, SPA, and debugging.
             </Typography>
           <div className="container">
-            <Timeline position="alternate" color='black'sx={{color:'black'}} >
+            <Timeline position="alternate" color='black'sx={{color:'black', width: 'fit-content'}} >
               <TimelineCard
                 time="November 2021 - present"
                 activity="Frontend Developer"

@@ -56,7 +56,7 @@ export default function Portfolio() {
 
     return (
         <div className="portfolio" id='portfolio'>
-            <Typography variant="h2">Skills</Typography>
+            <Typography variant="h4">Skills</Typography>
             <ul>
                 {list.map(item => 
                     <PortfolioList 

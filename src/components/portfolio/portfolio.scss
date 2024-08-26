@@ -12,14 +12,6 @@
         padding-top: 50px;
     }
 
-    h1{
-        font-size: 50px;
-
-        @include mobile{
-            font-size: 20px;
-        }
-    }
-
     ul{
         margin: 10px;
         padding: 0;
